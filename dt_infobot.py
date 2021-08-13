@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
 import discord
 import json
 
 with open("account.info", encoding="utf-8") as f:
     accountDICT = json.loads(f.read())
+
+print(accountDICT)
 
 class BotClient(discord.Client):
     async def on_ready(self):
